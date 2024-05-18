@@ -1,0 +1,24 @@
+{
+    "name": "Java 22 Development Environment",
+    "image": "mcr.microsoft.com/devcontainers/java:22",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "esbenp.prettier-vscode"
+            ],
+            "settings": {
+                "java.configuration.runtimes": [
+                    {
+                        "name": "JavaSE-22",
+                        "path": "/usr/local/openjdk-22"
+                    }
+                ]
+            }
+        }
+    },
+    "postCreateCommand": "javac -version && java -version",
+    "forwardPorts": [8080, 3000]
+}
